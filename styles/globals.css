@@ -1,27 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Lato&family=Prompt:wght@400;500&family=Roboto&family=Tektur:wght@400;500&family=Ubuntu&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --font-lato: 'Lato', sans-serif;
+  --font-prompt: 'Prompt', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-tekur: 'Tektur', cursive;
+  --font-bricolage: 'Bricolage Grotesque', sans-serif;
+  --font-ubuntu: 'Ubuntu', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar-track
+{
+	background-color: #18142D;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar
+{
+	width: 8px;
+	height: 8px;
+	background-color: #e40e0e;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #4e4875;
+}
+
+
+nav {
+  font-family: var(--font-roboto);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2 {
+  font-family: var(--font-ubuntu);
+}
+
+h1 {
+  @apply text-3xl  pb-3 w-fit;
+  @apply cursor-pointer;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+span {
+  font-family: var(--font-roboto);
+  @apply text-base font-bold
+}
+
+.underline-effect {
+  @apply border-b-4 transition-all border-b-underline-light hover:border-b-underline-dark hover:text-gray-500;
+}
+
+p{
+  font-family: var(--font-roboto);
+  @apply text-sm font-extralight;
+}
+
+button {
+  font-family: var(--font-prompt);
+  @apply bg-accent px-4 py-2 rounded-sm text-black transition-all hover:-translate-y-1 font-normal;
 }
