@@ -1,118 +1,62 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+/* eslint-disable @next/next/no-img-element */
+import MainLayout from "@/Components/MainLayout";
+import Center from "@/Components/Center";
+import LineDot from "@/Components/LineDot";
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 hidden md:flex"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Barun{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    return (
+        <MainLayout>
+            <Center>
+                <section className=" flex gap-1 justify-around h-[32rem]" id="banner">
+                    <aside className="h-full w-full px-2 py-1 flex flex-col gap-5 items-center justify-center z-10">
+                        <h1 className="text-3xl font-extralight">👋 Welcome to Barun &apos; s Portfolio</h1>
+                        <p className="text-sm font-thin text-center">Hello there!, 🌟 and welcome to my portfolio! I &apos; m Barun, a driven and curious computer science student, eager to showcase my journey and passion for technology. Here, you &apos; ll find a collection of my projects, accomplishments, and explorations in the world of computer science.</p>
+                        <button className="my-5 shadow-green">Projects</button>
+                    </aside>
+                    <aside className="h-full w-full justify-center items-center z-10 hidden md:flex">
+                        <img className="h-[50%] md:h-[70%] rounded-full" src="/hero.png" alt="logo" />
+                    </aside>
+                </section>
+                <section className="py-5 flex flex-col gap-10" id="about">
+                    <div className="flex flex-col gap-5">
+                        <h1 className="underline-effect">About Me</h1>
+                        <p>I am Barun Tiwary, Computer Science student is on the way of Mastering Computer Science.As a computer science enthusiast, I &apos; m constantly fascinated by the power of technology to solve complex problems and transform lives. Curently I &apos; m pursuing a Diploma in Computer Science, and my goal is to leverage my knowledge and skills to make a meaningful impact in the tech industry.</p>
+                        <p>As a lifelong learner, I &apos; m always seeking new knowledge and experiences to broaden my perspective and enhance my skills.</p>
+                        <p>Thanks for taking the time to learn a little about me!</p>
+                    </div>
+                    <div className="flex flex-col gap-10">
+                        <h1 className="underline-effect">My Journey</h1>
+                        <div className="flex flex-col gap-5 ml-3">
+                            <h2>Schooling</h2>
+                            <div className="flex flex-col gap-2 ml-5">
+                                <LineDot>
+                                    <p>Completed Class 10 from Vivekananda English High School (ICSE)</p>
+                                </LineDot>
+                                <LineDot>
+                                    <p>Completed +2 from Central Karimia +2 High School</p>
+                                </LineDot>
+                                <LineDot>
+                                    <p>Currently persuing Diploma in Computer Science from Gov. Polytechinc Adiyapur</p>
+                                </LineDot>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-5 ml-3">
+                            <h2>Learning Path</h2>
+                            <div className="flex flex-col gap-2 ml-5">
+                                <LineDot>
+                                    <p>Completed Class 10 from Vivekananda English High School (ICSE)</p>
+                                </LineDot>
+                                <LineDot>
+                                    <p>Completed +2 from Central Karimia +2 High School</p>
+                                </LineDot>
+                                <LineDot>
+                                    <p>Currently persuing Diploma in Computer Science from Gov. Polytechinc Adiyapur</p>
+                                </LineDot>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </Center>
+        </MainLayout>
+    )
 }
